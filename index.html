@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#17251c" />
+    <meta name="description" content="Explore Trash to Treasure, a living 3D circular market inspired by Harare, Zimbabwe." />
+    <title>Trash to Treasure — A Cleaner, Circular Market</title>
+  </head>
+  <body>
+    <div id="app">
+      <main id="world" aria-label="Interactive three-dimensional Harare market"></main>
+
+      <header class="topbar">
+        <a class="brand" href="#" aria-label="Trash to Treasure home">
+          <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span><strong>EVOKE</strong><small>ZIMBABWE · CIRCULAR FUTURES</small></span>
+        </a>
+        <div class="topbar-right">
+          <span class="live-pill"><span></span><span id="clock">09:41</span> HARARE · LIVE MARKET</span>
+          <button class="icon-button sound-toggle" id="motionToggle" aria-label="Pause market animation" title="Pause market animation">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+          </button>
+        </div>
+      </header>
+
+      <nav class="location-pins" id="locationPins" aria-label="Market location markers"></nav>
+
+      <nav class="camera-controls" aria-label="Market camera controls">
+        <div class="focus-buttons">
+          <button class="focus-button active" data-view="market">OVERVIEW</button>
+          <button class="focus-button" data-view="shops">MARKET</button>
+          <button class="focus-button" data-view="biogas">BIOGAS</button>
+          <button class="focus-button" data-view="farm">FARM</button>
+          <button class="focus-button" data-view="plastic">PLASTICS</button>
+          <button class="focus-button" data-view="metal">METAL</button>
+          <button class="tour-button" id="tourButton" aria-label="Start circular economy presentation">PRESENT <span aria-hidden="true">▶</span></button>
+        </div>
+        <button class="reset-button" id="resetCamera" aria-label="Reset camera" title="Reset camera"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11a8 8 0 1 0 2 5M20 4v7h-7"/></svg></button>
+      </nav>
+
+      <footer class="scene-footer" aria-live="polite">
+        <section class="footer-story" aria-label="Selected location information">
+          <p class="footer-eyebrow" id="storyEyebrow">TRASH TO TREASURE · HARARE</p>
+          <h2 id="storyTitle">A MARKET WITH A SECOND LIFE</h2>
+          <p id="storyBody">Explore the stalls, meet the traders and follow each material to its next use.</p>
+          <div id="storyOutcome" class="footer-outcome">EVOKE ZIMBABWE · CIRCULAR FUTURES</div>
+        </section>
+        <section class="footer-streams" aria-label="Three separated waste streams">
+          <button class="waste-item selected" data-focus="bin-organic" aria-label="Focus organic waste bin">
+            <span class="waste-symbol organic-symbol">◌</span><span class="waste-copy"><strong>ORGANIC</strong><small>BIOLOGICAL RECOVERY</small></span><span class="waste-arrow">↗</span>
+          </button>
+          <button class="waste-item" data-focus="bin-plastic" aria-label="Focus plastic waste bin">
+            <span class="waste-symbol plastic-symbol">♧</span><span class="waste-copy"><strong>PLASTIC</strong><small>REUSE · THEN RECYCLE</small></span><span class="waste-arrow">↗</span>
+          </button>
+          <button class="waste-item" data-focus="bin-metal" aria-label="Focus metal waste bin">
+            <span class="waste-symbol metal-symbol">⊞</span><span class="waste-copy"><strong>METAL</strong><small>METAL RECOVERY</small></span><span class="waste-arrow">↗</span>
+          </button>
+        </section>
+      </footer>
+      <div id="tooltip" class="scene-tooltip" role="status"></div>
+      <div id="loading" class="loading-screen"><div class="loading-mark"><i></i><i></i><i></i></div><span>SETTING THE MARKET IN MOTION</span></div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
